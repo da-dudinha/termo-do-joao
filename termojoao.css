@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.subtitulo {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  margin: 1rem 0;
+  border-radius: 10px;
+  border: 2px solid #4facfe;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #00c6ff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00c6ff;
+}
+
+.tentativas {
+  margin: 1rem 0;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.letra {
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  animation: popIn 0.4s ease-in-out;
+}
+
+.correto {
+  background: #28a745;
+}
+
+.posicao-errada {
+  background: #ffc107;
+}
+
+.errado {
+  background: #6c757d;
+}
+
+#mensagem {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.confete-piece {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  opacity: 0.7;
+  animation: cair linear forwards;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
